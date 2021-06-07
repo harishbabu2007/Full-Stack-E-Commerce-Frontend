@@ -1,0 +1,31 @@
+.navbar__ul-navbar {
+  --bs-scroll-height: 100px;
+}
+
+.log-in {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navbar__cart_holder {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__cart {
+  font-size: 20px;
+}
+
+@media (max-width: 990px) {
+  .sign-up {
+    margin-top: 10px;
+  }
+
+  .log-in {
+    margin-top: 10px;
+  }
+
+  .navbar__cart {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,24 @@
+.viewproduct {
+  padding: 20px;
+}
+
+.viewproduct__pic {
+  object-fit: contain;
+  height: 300px;
+}
+
+.viewproduct__card {
+  padding: 30px;
+}
+
+.viewproduct__jumbotron {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1200px) {
+  .viewproduct__jumbotron {
+    display: flex;
+    flex-direction: column;
+  }
+}
