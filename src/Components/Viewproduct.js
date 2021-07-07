@@ -71,7 +71,8 @@ function Viewproduct() {
               alert("Product Added To Cart");
             });
         } else {
-          window.location = "http://localhost:8000/login";
+          window.location =
+            "https://onlineshoppingbackendharish.pythonanywhere.com/login";
         }
       });
   };

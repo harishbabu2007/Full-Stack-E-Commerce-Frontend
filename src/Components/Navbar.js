@@ -65,13 +65,13 @@ function Navbar() {
           {!isAuth ? (
             <div>
               <a
-                href="http://localhost:8000/login"
+                href="https://onlineshoppingbackendharish.pythonanywhere.com/login"
                 className="btn btn-warning log-in"
               >
                 Log In
               </a>
               <a
-                href="http://localhost:8000/register"
+                href="https://onlineshoppingbackendharish.pythonanywhere.com/register"
                 className="btn btn-warning sign-up"
               >
                 Sign Up
@@ -80,7 +80,7 @@ function Navbar() {
           ) : (
             <div className="navbar__cart_holder">
               <a
-                href="http://localhost:8000/logout"
+                href="https://onlineshoppingbackendharish.pythonanywhere.com/logout"
                 className="btn btn-danger log-in"
               >
                 Log Out
