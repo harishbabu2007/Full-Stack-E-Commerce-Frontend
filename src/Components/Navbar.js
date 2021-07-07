@@ -5,6 +5,14 @@ import "./styles/Navbar.css";
 
 function Navbar() {
   const [isAuth, setIsAuth] = useState(false);
+  const [searchData, SetSearchData] = useState("");
+
+  const FormSubmitHandler = (e) => {
+    e.preventDefault();
+    if (searchData) {
+      window.location = "/search/" + searchData;
+    }
+  };
 
   useEffect(() => {
     const check_is_auth = async () => {
@@ -40,12 +48,15 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <form className="d-flex">
+          <form className="d-flex" onSubmit={FormSubmitHandler}>
             <input
               className="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              onChange={(e) => {
+                SetSearchData(e.target.value);
+              }}
             />
             <button className="btn btn-outline-light" type="submit">
               Search

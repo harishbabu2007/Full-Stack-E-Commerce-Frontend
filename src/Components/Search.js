@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./styles/Homepage.css";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
-function Homepage() {
+function Search() {
+  const { query } = useParams();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      await axios.get("/api/react/list_products?key=no2$gold").then((res) => {
-        setProducts(res.data);
-      });
+      await axios
+        .get(`/api/react/search_products?key=no2$gold&query=${query}`)
+        .then((res) => {
+          setProducts(res.data);
+        });
     };
 
     fetchProducts();
-  }, []);
+  }, [query]);
 
   return (
     <div className="homepage">
@@ -46,4 +48,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Search;
