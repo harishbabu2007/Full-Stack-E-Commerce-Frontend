@@ -8,6 +8,13 @@ function Cart() {
 
   useEffect(() => {
     const check_if_auth = async () => {
+      await axios.get("/api/react/check_is_auth?key=no2$gold").then((res) => {
+        if (res.data.auth !== true) {
+          window.location = "/";
+        }
+      });
+    };
+    const getCartData = async () => {
       await axios
         .get("/api/react/get_cart_products?key=no2$gold")
         .then((res) => {
@@ -15,7 +22,9 @@ function Cart() {
           console.log(res.data);
         });
     };
+
     check_if_auth();
+    getCartData();
   }, []);
 
   const DeleteCartItem = async (id) => {
@@ -64,6 +73,17 @@ function Cart() {
               <a href="/">Try Adding Some</a>
             </span>
           </h1>
+        </div>
+      ) : null}
+
+      {cartData.length !== 0 ? (
+        <div style={{ marginTop: "100px" }}>
+          <a
+            href="/view/action/checkout"
+            className="btn btn-success w-100 cart__proceed_btn"
+          >
+            Proceed To Check Out 💳
+          </a>
         </div>
       ) : null}
     </div>

@@ -1,3 +1,17 @@
 .cart__delete-btn {
   margin-left: 10px;
 }
+
+.cart__proceed_btn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 0px;
+  height: 80px;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 55px;
+}

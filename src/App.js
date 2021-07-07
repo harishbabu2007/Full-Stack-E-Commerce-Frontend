@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar";
 import Homepage from "./Components/Homepage";
 import Viewproduct from "./Components/Viewproduct";
 import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
           </Route>
           <Route path="/view/action/cart">
             <Cart />
+          </Route>
+          <Route path="/view/action/checkout">
+            <Checkout />
           </Route>
         </Switch>
       </div>

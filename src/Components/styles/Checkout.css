@@ -1,0 +1,26 @@
+.checkout__rec {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.5px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.checkout__rec:hover {
+  border-color: grey;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.checkout__green:hover {
+  border-color: lightgreen;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.checkout__btn_back {
+  padding: 20px;
+}
